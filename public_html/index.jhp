@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <jhp>
+            include("libs/jhp/imports.jhp");
+        </jhp>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="?r="><img src="imgs/logo.png" style="height: 50px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto">    
+                    <a class="nav-item nav-link active" href="?r="><i class="fas fa-home"></i> Inicio</a>
+                    <a class="nav-item nav-link active" href="?r=courses"><i class="fas fa-book"></i> Cursos</a>
+                    <a class="nav-item nav-link active" href="?r=teachers"><i class="fas fa-chalkboard-teacher"></i> Professores</a>
+                    <a class="nav-item nav-link active turbo" href="?r=turbo"><i class="fas fa-rocket"></i> Turbo</a>
+                </div>
+                <div class="navbar-nav my-2 my-lg-0">
+                    <a class="nav-item nav-link active" href="?r=login" style="padding-right: 5px"><i class="fas fa-user"></i> Login</a>
+                </div>
+            </div>
+        </nav>
+        <div class="page_content" style="margin-top: 56px;">
+            <jhp>
+                var r = $_GET['r'];
+                if(r == "" || r == "index" || r == undefined) r = "home";
+                include("main/"+r+".jhp");
+            </jhp>
+        </div>
+    </body>
+</html>

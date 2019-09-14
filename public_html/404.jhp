@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>404 - Não foi encontrado</title>
+    <jhp>include('libs/jhp/imports.jhp')</jhp>
+</head>
+<body>
+    <div class="panel-title">
+            <div style="color: white" class="center subtitle">
+                <h1>Opsss... Essa página não foi encontrada!</h1>
+            <div style="float: right"><jhp>echo("Client IP: "+$_REMOTEADDR);</jhp></div>
+            <div style="float: left"><jhp>echo("Request URL: "+$_REQUESTURL);</jhp></div>
+        </div>
+    </div>
+</body>
+</html>

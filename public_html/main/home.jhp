@@ -1,0 +1,33 @@
+<head>
+        <title>Inicio - LearnUp</title>
+    </head>
+    
+    <script>
+        $(document).ready(function(){
+            animate('index');
+        });
+    </script>
+    
+    <br>
+    <div class="brs">
+    <br><br><br><br>
+    </div>
+    <div class="row">
+        <div class="col col-12 col-lg-8 offset-lg-2">
+            <center>
+                <div id="lineDrawing" align="center"> <svg class="homeResize" viewBox="0 0 250 250">
+                    <g fill="none" fill-rule="evenodd" stroke="#AA0B27" stroke-width="2" class="lines">
+                        <path d="M 0 0 L 0 250 L 250 250 L 250 0 L 0 250 L 125 125 Z"></path>
+                    </g>
+                    <img id="imgLogo" class="homeResize" style="position: absolute;	 opacity: 0; transform: translateX(-100%); z-index: 5" src="imgs/icon.png">
+                </svg><br><br>
+                <h2 style="opacity: 0" id="title">Bem-Vindo ao LearnUp</h2>
+                <h4 style="opacity: 0" id="subtitle">Que tal dar um Level Up em seu aprendizado?</h4><br>
+                <div class="log" style="opacity: 0">
+                    <a href="?r=courses" class="btn btn-warning">Ver cursos</a><br><br>
+                    <span id="logbtn" style="color: white">ou Role para baixo</span>
+                </div>
+            </center>
+        </div>
+    </div>
+</div>

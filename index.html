@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Inicio - LearnUp</title>
+        <script src="libs/js/f.js"></script>
+        <script src="libs/js/jquery-3.4.1.min.js"></script>
+        <script src="libs/js/bootstrap.min.js"></script>
+        <script src="libs/js/script.js"></script>
+        <script src="https://kit.fontawesome.com/5835e21615.js"></script>
+        <script src="libs/js/anime.min.js"></script>
+        <script src="libs/js/animations.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="libs/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="libs/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" type="text/css" href="libs/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="libs/css/style.css">
+
+        <link rel="icon" type="image/png" href="imgs/icon.png">
+
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <meta charset='utf-8'>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="?r="><img src="imgs/logo.png" style="height: 50px"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav mr-auto">    
+                    <a class="nav-item nav-link active" href="index.html"><i class="fas fa-home"></i> Inicio</a>
+                    <a class="nav-item nav-link active" href="cursos.html"><i class="fas fa-book"></i> Cursos</a>
+                    <a class="nav-item nav-link active" href="professores.html"><i class="fas fa-chalkboard-teacher"></i> Professores</a>
+                    <a class="nav-item nav-link active turbo" href="turbo.html"><i class="fas fa-rocket"></i> Turbo</a>
+                </div>
+                <div class="navbar-nav my-2 my-lg-0">
+                    <a class="nav-item nav-link active" data-toggle="modal" data-target="#loginModal" style="padding-right: 5px"><i class="fas fa-user"></i> Login</a>
+                </div>
+            </div>
+        </nav>
+        <div class="page_content" style="margin-top: 56px;">
+            <script>
+                $(document).ready(function(){
+                animate('index');
+                });
+            </script>
+            
+            <br>
+            <div class="brs">
+            <br><br><br><br>
+            </div>
+            <div class="row">
+                <div class="col col-12 col-lg-8 offset-lg-2">
+                    <center>
+                        <div id="lineDrawing" align="center"> <svg class="homeResize" viewBox="0 0 250 250">
+                            <g fill="none" fill-rule="evenodd" stroke="#AA0B27" stroke-width="2" class="lines">
+                                <path d="M 0 0 L 0 250 L 250 250 L 250 0 L 0 250 L 125 125 Z"></path>
+                            </g>
+                            <img id="imgLogo" class="homeResize" style="position: absolute;	 opacity: 0; transform: translateX(-100%); z-index: 5" src="imgs/icon.png">
+                        </svg><br><br>
+                            <h2 style="opacity: 0" id="title">Bem-Vindo ao LearnUp</h2>
+                            <h4 style="opacity: 0" id="subtitle">Que tal dar um Level Up em seu aprendizado?</h4><br>
+                            <div class="log" style="opacity: 0">
+                                <a href="?r=courses.php" class="btn btn-warning">Ver cursos</a><br><br>
+                                <span id="logbtn" style="color: white">ou Role para baixo</span>
+                            </div>
+                    </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title bg-dark" id="exampleModalLabel">Logar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-dark">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-outline w-50">Registrar</button>
+                    <button type="button" class="btn btn-primary w-50">Logar</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

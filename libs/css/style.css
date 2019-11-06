@@ -80,3 +80,12 @@ html {
 .page_content {
     color: white !important;
 }
+
+.nav-link{
+    cursor: pointer;
+}
+
+.scrollEnable{
+    opacity: 0;
+    transition: .5s;
+}

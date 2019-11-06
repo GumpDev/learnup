@@ -19,7 +19,7 @@
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <meta charset='utf-8'>
     </head>
-    <body>
+    <body style="height: 1500px;">
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <a class="navbar-brand" href="?r="><img src="imgs/logo.png" style="height: 50px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,7 @@
             </div>
             <div class="row">
                 <div class="col col-12 col-lg-8 offset-lg-2">
-                    <center>
+                    <div align="center">
                         <div id="lineDrawing" align="center"> <svg class="homeResize" viewBox="0 0 250 250">
                             <g fill="none" fill-rule="evenodd" stroke="#AA0B27" stroke-width="2" class="lines">
                                 <path d="M 0 0 L 0 250 L 250 250 L 250 0 L 0 250 L 125 125 Z"></path>
@@ -63,7 +63,7 @@
                                 <a href="?r=courses.php" class="btn btn-warning">Ver cursos</a><br><br>
                                 <span id="logbtn" style="color: white">ou Role para baixo</span>
                             </div>
-                    </center>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -80,14 +80,81 @@
                     </button>
                 </div>
                 <div class="modal-body bg-dark">
-                    
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Coloque o email">
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Senha</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary btn-outline w-50">Registrar</button>
-                    <button type="button" class="btn btn-primary w-50">Logar</button>
+                    <button onclick="tradeModal(2)" type="button" id="regisBtn" class="btn btn-outline-secondary w-50">Registrar</button>
+                    <button onclick="tradeModal(1)" type="button" id="loginBtn" class="btn btn-primary w-50">Logar</button>
                 </div>
             </div>
             </div>
         </div>
+        <script>
+            function interval(){
+                setTimeout(() => {
+                    if(window.scrollY > 0){
+                        var objs = document.querySelectorAll(".scrollEnable");
+                        objs.forEach((obj)=>{
+                            obj.style.opacity = "1";
+                        });
+                    }else interval();
+                }, 250);
+            }
+            interval();
+
+            function tradeModal(value){
+                switch(value){
+                    case 1:
+                        document.getElementById("regisBtn").className = "btn btn-outline-secondary w-50";
+                        document.getElementById("loginBtn").className = "btn btn-primary w-50";
+                        var toAdd = "";
+                        toAdd += "<form>";
+                        toAdd += '    <div class="form-group">';
+                        toAdd += '        <label for="exampleInputEmail1">Email</label>';
+                        toAdd += '        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Coloque o email">';
+                        toAdd += '    </div>';
+                        toAdd += '    <div class="form-group">';
+                        toAdd += '        <label for="exampleInputPassword1">Senha</label>';
+                        toAdd += '        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">';
+                        toAdd += '    </div>';
+                        toAdd += "</form>";
+                        document.querySelector(".modal-body.bg-dark").innerHTML = toAdd;
+                    break;
+                    case 2:
+                        document.getElementById("regisBtn").className = "btn btn-secondary w-50";
+                        document.getElementById("loginBtn").className = "btn btn-outline-primary w-50";
+                        var toAdd = "";
+                        toAdd += "<form>";
+                        toAdd += '    <div class="form-group">';
+                        toAdd += '        <label for="exampleInputUserName1">Apelido</label>';
+                        toAdd += '        <input type="text" class="form-control" id="exampleInputUserName1" placeholder="Coloque o apelido">';
+                        toAdd += '    </div>';
+                        toAdd += '    <div class="form-group">';
+                        toAdd += '        <label for="exampleInputEmail1">Email</label>';
+                        toAdd += '        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Coloque o email">';
+                        toAdd += '    </div>';
+                        toAdd += '    <div class="form-group">';
+                        toAdd += '        <label for="exampleInputPassword1">Senha</label>';
+                        toAdd += '        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">';
+                        toAdd += '    </div>';
+                        toAdd += '    <div class="form-group">';
+                        toAdd += '        <label for="exampleInputPassword2">Confirme a Senha</label>';
+                        toAdd += '        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirme a Senha">';
+                        toAdd += '    </div>';
+                        toAdd += "</form>";
+                        document.querySelector(".modal-body.bg-dark").innerHTML = toAdd;
+                    break;
+                }
+            }
+        </script>
     </body>
 </html>

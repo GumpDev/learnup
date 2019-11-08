@@ -7,9 +7,11 @@
     overflow: hidden;
 }
 
-body,
 html {
     overflow-y: auto;
+}
+
+body{
     background-color: #222;
 }
 
